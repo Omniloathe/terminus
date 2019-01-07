@@ -1,17 +1,7 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta content="argument">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Argu.it</title>
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-    <header><a href="blank">Login</a></header>
-    <hr>
-    <h1>Welcome to Terminus, the argument forum</h1>
-    <p>Enter a new argument</p>
+{% extends "base.html" %}
+{% block page_content %}
+
+<p>Enter a new argument</p>
     <div id="antecedent_div">
     <input type="text" id="addclausetext"><button onclick="handlers.addClause()">Add Clause</button>
       <br>
@@ -28,12 +18,11 @@
       <span id="validatemsg"></span>
       <button class="sidebutton" onclick="handlers.validate()">Validate</button>
     </div>
-    
-    <hr>
-    <footer></footer>
-    <script src="logic.js"></script>
-    <script src="logic_interp.js"></script>
-    <script src="KB.js"></script>
-    <script src="newarg.js"></script>
-  </body>
-</html>
+{% endblock %}
+{% block scripts %}
+<script type="text/javascript" src="{{ url_for('static', filename = 'js/logic.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename = 'js/logic_interp.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename = 'js/KB.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename = 'js/newarg.js') }}"></script>
+{{ super() }}
+{% endblock %}

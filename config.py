@@ -1,1 +1,3 @@
 DEBUG=True
+SECRET_KEY = 'W(TS&E(RJK#L:S#a%&RS(*FDEJOF'
+

@@ -1,10 +1,10 @@
 //random filler for footer to add content
-function dateStr(){
+/*function dateStr(){
   return new Date().toDateString();
 }
 
 var footer=document.querySelector('footer');
-footer.innerHTML=dateStr();
+footer.innerHTML=dateStr();*/
 
 //argument object
 

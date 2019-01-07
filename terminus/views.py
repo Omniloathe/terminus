@@ -19,3 +19,18 @@ def about():
 @app.route('/newarg')
 def new_arg():
     return render_template('newargument.html')
+
+@app.route('/jstest')
+def js_test():
+    return render_template('jstest.html')
+
+
+#error handling
+
+@app.errorhandler(404)
+def page_not_found(e):
+    return render_template('404.html'), 404
+
+@app.errorhandler(500)
+def internal_service_error(e):
+    return render_template('500.html'), 500
