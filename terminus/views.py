@@ -13,9 +13,12 @@ def index():
 def about():
     return render_template('about.html',title='About Terminus')
 
+@app.route('/login',methods=['POST'])
+def login():
+    pass
 
 
-#probably doesn't work
+
 @app.route('/newarg')
 def new_arg():
     return render_template('newargument.html')
